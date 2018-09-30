@@ -34,10 +34,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+        // background: blue;
+        margin: 0;
+    }
 }
 .iphone-6s, .iphone-x{
     height: 500px;
     width: 260px;
+
     background: red;
     margin: 50px;
     border-radius: 35px;
@@ -46,7 +53,9 @@ body{
     border: 5px solid #EFF7FF;
     transition: 0.5s;
     cursor: pointer;
-    box-shadow: 10px 100px 50px rgba(black, 0.3);
+
+    
+
     &:hover{
         box-shadow: 10px 100px 50px rgba(black, 0.3);
         transform: translateY(-50px);
@@ -104,6 +113,11 @@ body{
             border-radius: 100px;
         }
     }
+    @media screen and (max-width: 768px) {
+        margin: 0;
+        margin-top: 50px;
+        width: 78%;
+    }
 }
 
 .iphone-x{
@@ -115,6 +129,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
     &::before{
         content: "";
         position: absolute;
@@ -147,6 +162,13 @@ body{
         position: relative;
         // background: #020f75;
     }
+
+    @media screen and (max-width: 768px) {
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 84%;
+    }
 }
 
 .header{
@@ -171,6 +193,8 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
+    // background: red;
+    justify-content: space-between;
     &.x{
         margin-top: 25px;
     }
