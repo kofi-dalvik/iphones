@@ -1,0 +1,269 @@
+body{
+    background: #dddddd;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    5%{
+        transform: rotate(5deg);
+    }
+    6%{
+        transform: rotate(-5deg);
+    }
+    7%{
+        transform: rotate(5deg);
+    }
+    8%{
+        transform: rotate(-5deg);
+    }
+    25%{
+        transform: translateY(-100px);
+    }
+    50%{
+        transform: translateY(80px);
+    }
+}
+
+.iphones{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 100px;
+    // background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iphone-6s, .iphone-x{
+    height: 500px;
+    width: 260px;
+    background: red;
+    margin: 50px;
+    border-radius: 35px;
+    box-sizing: border-box;
+    position: relative;
+    border: 5px solid #EFF7FF;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 10px 100px 50px rgba(black, 0.3);
+    &:hover{
+        box-shadow: 10px 100px 50px rgba(black, 0.3);
+        transform: translateY(-50px);
+        // animation: bounce 1s ease;
+    }
+}
+.iphone-6s{
+    background: white;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 15px;
+        background: #EFF6EE;
+        left: -8px;
+        top: 55px;
+        border-radius: 5px;
+
+        box-shadow: 0 30px 0 #EFF6EE, 0 35px 0 #EFF6EE,
+        0 60px 0 #EFF6EE, 0 65px 0 #EFF6EE;
+    }
+    // box-shadow: 2px -2px 0px 2px #B6BAC6;
+    .screen{
+        width: 96%;
+        height: 77%;
+        background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);;
+        margin: auto;
+        margin-top: 55px;
+        position: relative;
+        box-shadow: 0 0 1px rgba(black, 0.2);
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 40%;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            border: 2px solid #74757C;
+
+            box-shadow: -40px -435px 0 -18px #74757C,
+            0px -450px 0 -19px #74757C;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: -27px;
+            width: 45px;
+            height: 4px;
+            background: #74757C;
+            left: 40%;
+            border-radius: 100px;
+        }
+    }
+}
+
+.iphone-x{
+    background: black;
+    border-width: 0px;
+    border-radius: 52px;
+    width: 285px;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 15px;
+        background: black;
+        left: -2px;
+        top: 55px;
+        border-radius: 5px;
+
+        box-shadow: 0 30px 0 black, 0 35px 0 black,
+        0 60px 0 black, 0 65px 0 black;
+    }
+    &::after{
+        content: "";
+        width: 50%;
+        height: 30px;
+        background: black;
+        position: absolute;
+        top: 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .screen{
+        width: 93%;
+        height: 95%;
+        // background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+        background: linear-gradient(to top, #020f75 0%, #0c1db8 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #fcc5e4 100%);;
+        border-radius: 35px;
+        position: relative;
+        // background: #020f75;
+    }
+}
+
+.header{
+    color: #eeeeee;
+    font-size: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    // background: yellow;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    &.x{
+        margin-top: 5px;
+        padding-right: 18px;
+        padding-left: 18px;
+        font-size: 10px;
+    }
+}
+
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    &.x{
+        margin-top: 25px;
+    }
+    .icon{
+        background: white;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        position: relative;
+        flex-direction: column;
+        .badge{
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            display: inline-block;
+            background: red;
+            font-size: 10px;
+            padding: 3px;
+            border-radius: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        &.message{
+            background: #1677EF;
+            color: white;
+        }
+        &.camera{
+            background: #cccccc;
+            p{color: white;}
+        }
+        &.home{
+            color: orange;
+            p{color: white;}
+        }
+        &.itunes{
+            color: white;
+            background: #F053EF;
+        }
+        &.facetime{
+            background: #22EA42;
+            color: white;
+        }
+        &.files{
+            p{color: white;}
+            color: #1677EF;
+        }
+        &.twitter{
+            color: white;
+            background: #1677EF;
+        }
+        &.facebook{
+            background: #4156A7;
+            color: white;
+        }
+        &.youtube{
+            color: red;
+            .badge{
+                color: white;
+            }
+        }
+
+        p{
+            position: absolute;
+            font-size: 9px;
+            bottom: -25px;
+            letter-spacing: 1px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+}
+
+.screen{
+    .footer{
+        height: 50px;
+        width: 100%;
+        background: rgba(white, 0.2);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 10px;
+
+        &.x{
+            bottom: 20px;
+            width: 95%;
+            border-radius: 15px;
+            left: 7px;
+            background: rgba(white, 0.3);
+            
+        }
+    }
+}
